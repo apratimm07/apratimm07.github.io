@@ -1,0 +1,638 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(to bottom, #3a6186, #89253e);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header Styles */
+header {
+    position: relative;
+    background: url('images/apratimm.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 4rem 1rem;
+    min-height: 300px; /* Adjust for mobile */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Overlay for better readability */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Adjust transparency */
+    z-index: 1;
+}
+
+/* Header Content */
+header h1, header nav {
+    position: relative;
+    z-index: 2; /* Ensure content is above the overlay */
+}
+
+header h1 {
+    font-size: 6rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    opacity: 60%;
+    padding-top: 7rem;
+}
+
+header nav {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    background: rgba(232, 225, 225, 0.9);
+    z-index: 10;
+    display: flex;
+    justify-content: center; /* Center the navigation bar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+.navbar-toggle {
+    display: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center; /* Ensure links are centered */
+}
+
+/* Navigation Links */
+.nav-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-list li {
+    margin: 0 1rem;
+}
+
+.nav-list a {
+    color: #333; /* Dark text for contrast */
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-list a:hover {
+    color: #f9d423;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 3rem 1rem;
+        min-height: 250px; /* Adjust for smaller screens */
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header nav {
+        flex-direction: column;
+        align-items: flex-start;
+        left: 0;
+        transform: none;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.95);
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        padding: 1rem;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 0.5rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 2rem 1rem;
+        min-height: 200px; /* Adjust for very small screens */
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header nav ul {
+        flex-direction: column; /* Stack navigation items */
+        gap: 0.5rem;
+    }
+}
+
+/* Quotes Carousel Section */
+.quotes-carousel-section {
+    background: linear-gradient(to bottom, #ff9a9e, #fad0c4, #fad390);
+    color: #fff;
+    padding: 3rem 1rem;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.quotes-carousel-section {
+    background: linear-gradient(to right, #0624a9, #4a1b78);
+    color: #be8a19;
+    padding: 2rem 0;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.quotes-carousel {
+    position: relative;
+    overflow: hidden;
+    height: 120px; /* Adjust based on quote text length */
+}
+
+.quote {
+    display: none;
+    font-style: italic;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin: 0 auto;
+    max-width: 80%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.quote.active {
+    display: block;
+}
+
+/* Education Section */
+.education-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.education-card {
+    background: linear-gradient(to bottom, #204978, #1e668d);
+    color: #690707;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 280px;
+}
+
+.education-card:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.education-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 4px solid rgba(255, 255, 255, 0.3);
+}
+
+.education-card h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0 0.5rem;
+    color: #fff;
+}
+
+.education-card p {
+    font-size: 1.15rem;
+    padding: 0 0.1rem 0.1rem;
+    color: rgba(124, 228, 230, 0.9);
+}
+
+/* About Me Section */
+.about-content {
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+    background: #f4f4f9; /* Light background color */
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+    align-items: center;
+    flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+/* Responsive Image */
+.about-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover;
+    border: 4px solid #ddd; /* Border around the image */
+    margin: 0 auto; /* Center image on smaller screens */
+}
+
+/* About Details */
+.about-details {
+    flex: 1;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333; /* Text color */
+    text-align: left;
+}
+
+/* Bullets Styling */
+.about-details ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Auto-fit columns */
+    gap: 10px 20px; /* Vertical and horizontal spacing */
+}
+
+.about-details ul li {
+    font-size: 1rem;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Custom Bullet Points */
+.about-details ul li::before {
+    content: '\2022'; /* Unicode for a bullet point */
+    color: #3a6186; /* Custom bullet color */
+    font-size: 1.5rem;
+    line-height: 0;
+}
+
+/* Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .about-details ul {
+        grid-template-columns: 1fr; /* Single column for small screens */
+    }
+
+    .about-image {
+        width: 150px; /* Reduce image size */
+        height: 150px;
+    }
+
+    .about-details {
+        text-align: center; /* Center align text */
+    }
+
+    .about-details ul li {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-content {
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .about-image {
+        width: 120px; /* Smaller image for very small screens */
+        height: 120px;
+    }
+
+    .about-details ul li {
+        font-size: 0.85rem; /* Adjust list item size */
+    }
+}
+
+/* Section Styles */
+.section {
+    padding: 2rem 0;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    margin: 2rem auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Work Showcase Section */
+#work-showcase {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem 1rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#work-showcase h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.work-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.work-list li {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.work-list li strong {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.work-list li p {
+    margin: 0.5rem 0 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Skills Section */
+#skills {
+    background: #eaeaea; /* Light gray background */
+    color: #333;
+    padding: 3rem 1rem;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem; /* Slightly larger text for better readability */
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap; /* Ensure responsiveness on smaller screens */
+    justify-content: center; /* Center the content horizontally */
+    gap: 2rem; /* Space between skill items */
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.skill-item {
+    font-weight: bold; /* Highlight the skill category */
+    margin: 0 1rem; /* Horizontal spacing between categories */
+    color: #3a6186; /* Stylish color for category names */
+}
+
+.skill-item span {
+    font-weight: normal; /* Normal weight for the skill details */
+    color: #555; /* Subtle color for details */
+}
+
+/* Gallery Section */
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.photo-gallery {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+    padding: 20px 0;
+    flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.photo-gallery img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.photo-gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Carousel Buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(103, 95, 95, 0.6);
+    color: white;
+    font-size: 2rem;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.left-btn {
+    left: 10px;
+}
+
+.right-btn {
+    right: 10px;
+}
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    cursor: zoom-out;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+.lightbox .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .photo-gallery img {
+        height: 150px;
+    }
+
+    .carousel-btn {
+        font-size: 1.5rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .photo-gallery img {
+        height: 120px;
+    }
+}
+
+
+/* Contact Form */
+#contact-form {
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form button {
+    background: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#contact-form button:hover {
+    background: #555;
+}
+
+/* Floating Resume Button */
+.resume-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(to bottom right, #9f9094, #747e87);
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    padding: 15px 20px;
+    border-radius: 60px; /* Rounded button */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    z-index: 1000; /* Ensure it stays above other elements */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resume-text {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+}
+
+.resume-button:hover {
+    transform: scale(1.2); /* Larger hover effect */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(to bottom right, #544146, #747e87); /* Reversed gradient on hover */
+}
+
+.resume-button:active {
+    transform: scale(1.1); /* Slightly smaller when clicked */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Footer Styles */
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 0.1rem 0;
+    font-size: 0.9rem;
+}
