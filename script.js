@@ -1,3 +1,4 @@
+// Quote Carousel
 const quotes = document.querySelectorAll('.quote');
 let currentQuote = 0;
 
@@ -10,35 +11,44 @@ function showNextQuote() {
 // Change quote every 5 seconds
 setInterval(showNextQuote, 5000);
 
-// Mobile Navigation Functionality
-const navbarToggle = document.querySelector('.navbar-toggle');
-const navList = document.querySelector('.nav-list');
+// Mobile Navigation Toggle (Hamburger)
+document.addEventListener("DOMContentLoaded", () => {
+    const navbarToggle = document.querySelector('.navbar-toggle');
+    const navList = document.querySelector('.nav-list');
 
-navbarToggle.addEventListener('click', () => {
-    navList.classList.toggle('active');
+    if (navbarToggle && navList) {
+        navbarToggle.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+    }
 });
 
-// Open Lightbox
+// Lightbox Functionality
 function openLightbox(img) {
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
-    lightboxImg.src = img.src; // Set clicked image in the lightbox
-    lightbox.style.display = 'flex'; // Show lightbox
+    if (lightbox && lightboxImg) {
+        lightboxImg.src = img.src;
+        lightbox.style.display = 'flex';
+    }
 }
 
-// Close Lightbox
 function closeLightbox() {
     const lightbox = document.getElementById('lightbox');
-    lightbox.style.display = 'none'; // Hide lightbox
+    if (lightbox) {
+        lightbox.style.display = 'none';
+    }
 }
 
-// Scroll Gallery
+// Gallery Scrolling
 function scrollGallery(direction) {
     const gallery = document.getElementById('photoGallery');
-    const scrollAmount = gallery.offsetWidth / 2; // Scroll half the gallery width
-    if (direction === 'left') {
-        gallery.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-    } else {
-        gallery.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    const scrollAmount = gallery.offsetWidth / 2;
+
+    if (gallery) {
+        gallery.scrollBy({
+            left: direction === 'left' ? -scrollAmount : scrollAmount,
+            behavior: 'smooth'
+        });
     }
 }
