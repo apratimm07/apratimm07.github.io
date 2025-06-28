@@ -214,6 +214,21 @@ header nav ul {
     display: block;
 }
 
+@media (max-width: 480px) {
+  .quotes-carousel .quote p {
+    font-size: 1rem;        /* or try 16px */
+    padding: 0 1rem;         /* adds horizontal padding */
+    line-height: 1.5;
+    text-align: center;
+    word-break: break-word;
+  }
+}
+
+.quotes-carousel .quote {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
 /* Education Section */
 .education-grid {
     display: flex;
