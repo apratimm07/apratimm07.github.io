@@ -11,40 +11,60 @@
 </head>
 <body>
     <header class="main-header">
-        <div class="container">
-            <nav class="navbar">
-                <ul class="nav-list">
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <h1>APRATIM MISHRA</h1>
-        </div>
-    </header>    
+    <div class="container">
+      <nav class="navbar">
+        <button class="navbar-toggle" aria-label="Toggle navigation">
+          ☰
+        </button>
+        <ul class="nav-list">
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#stamps">Stamps</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+      </nav>
+      <h1>APRATIM MISHRA</h1>
+    </div>
+  </header>   
 
     <main>
         <section id="about" class="section">
-            <div class="container">
-                <h2>About Me</h2>
-                <div class="about-content">
-                    <img src="images/APRATIM.jpg" alt="Portrait of Apratim Mishra" class="about-image">
-                    <div class="about-details">
-                        <p>Hi, I am Apratim Mishra, an undergraduate student in the Computer Science and Engineering Department at the National Institute of Technology Srinagar, India. I am a motivated individual with a strong passion for research. I have a strong learning mindset, and I am eager to take advantage of every opportunity to grow and contribute to advancements in technology.</p>
-                        <ul>
-                            <li><strong>Hometown:</strong> Jaipur, India</li>
-                            <li><strong>Current City:</strong> Srinagar, India</li>
-                            <li><strong>Email:</strong> apratim.jpr@gmail.com</li>
-                            <li><strong>Hobbies:</strong> Stamp Collection, Travelling, Photography</li>
-                            <li><strong>Sports:</strong> Lawn Tennis</li>
-                            <li><strong>Languages:</strong> English, Hindi</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <div class="container">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <img
+        src="images/APRATIM.jpg"
+        alt="Portrait of Apratim Mishra"
+        class="about-image"
+      />
+
+      <div class="about-details">
+        <p>
+          Hi, I am Apratim Mishra, an undergraduate student in the Computer
+          Science and Engineering Department at the National Institute of
+          Technology Srinagar, India. I am a motivated individual with a strong
+          passion for research. I have a strong learning mindset, and I am eager
+          to take advantage of every opportunity to grow and contribute to
+          advancements in technology.
+        </p>
+
+        <div class="about-grid">
+          <div><strong>Hometown:</strong> Jaipur, India</div>
+          <div><strong>Current City:</strong> Srinagar, India</div>
+          <div><strong>Email:</strong> apratim.jpr@gmail.com</div>
+          <div>
+            <strong>Hobbies:</strong> Stamp Collection, Travelling, Photography
+          </div>
+          <div><strong>Sports:</strong> Lawn Tennis</div>
+          <div><strong>Languages:</strong> English, Hindi</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
         <section id="quotes" class="section quotes-carousel-section">
             <div class="container">
@@ -108,71 +128,64 @@
         </section>
 
         <section id="projects" class="section">
-            <div class="container">
-                <h2>Projects</h2>
-                <ul class="work-list">
-                    <!-- Experience -->
-                    <li>
-                        <strong>Development of Contrastive Learning Model</strong><br>
-                        <i>Research Intern - IIT Jammu (July 2024 - August 2024)</i>
-                        <ul class="work">
-                            <li>Built a contrastive learning model in PyTorch to generate
-                                embeddings for around 264,000 code snippets and calculated
-                                infoNCE loss.</li>
-                            <li>Converted code snippets from CWE dataset into Abstract
-                                Syntax Trees (ASTs) using Clang LLVM for structured
-                                representation.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <p><strong>Development of Information Retrieval System</strong><br>
-                        <i>Project Intern - IIT Jammu (December 2023 - February 2024)</i>
-                        <ul class="work">
-                            <li>Developed a NLP-driven information retrieval system using
-                                Hugging Face models and the RAG principle, implemented
-                                through the Langchain framework.</li>
-                            <li>Conducted PDF syntax analysis and implemented OCR to
-                                accurately extract and retrieve information from images.</li>
-                        </ul>
-                    </li>
-                    
-                    <!-- Projects -->
-                    <li>
-                        <p><strong>Legal Q/A Model</strong><br>
-                            <i>Undergraduate research project (July 2024 - December 2024)</i>
-                            <ul class="work">
-                                <li>Fine-tuned Llama2 model using PEFT LoRA for memory
-                                    optimization utilising the IndicLegalQA dataset.
-                                    </li>
-                                <li>Achieved up to 70% accuracy in legal Q/A tasks, validated
-                                    using Sentence-BERT based similarity scores.
-                                    </li>
-                            </ul>
-                        
-                    </li>
-                    <li>
-                        <p><strong>Expense-sharing application</strong><br>
-                            <i>Course project (November 2023)</i>
-                            <ul class="work">
-                                <li>Built a C++ application to manage shared expenses using
-                                    object-oriented principles.                                    
-                                    </li>
-                                <li>Designed key classes for efficient management of
-                                    participants, expenses, and group transactions.
-                                    </li>
-                            </ul>                        
-                    </li>
-                    <li>
-                        <p><strong>Amazon Clone</strong></p>
-                        <i>Course project (September 2023 - November 2023)</i>
-                        <ul class="work">
-                        <li>Contributed to front-end development using HTML, CSS, and JavaScript to replicate the Amazon shopping platform as part of a group project.</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        
+  <div class="container">
+    <h2>Projects</h2>
+
+    <div class="project-card">
+      <h3>Covert Channels and Role of eBPF in System Monitoring</h3>
+      <p class="project-role">Research Intern – IIT Jammu <span>(December 2024 – February 2025)</span></p>
+      <ul class="project-bullets">
+        <li>Conducted research on eBPF architecture and its security vulnerabilities.</li>
+        <li>Developed covert storage channel attacks by manipulating file permissions.</li>
+        <li>Utilised eBPF-based tools to monitor and analyze system processes and interactions.</li>
+      </ul>
+    </div>
+
+    <div class="project-card">
+      <h3>Development of Contrastive Learning Model</h3>
+      <p class="project-role">Research Intern – IIT Jammu <span>(July 2024 – August 2024)</span></p>
+      <ul class="project-bullets">
+        <li>Built a contrastive learning model in PyTorch to generate embeddings for around 264,000 code snippets and calculated infoNCE loss.</li>
+        <li>Converted code snippets from CWE dataset into Abstract Syntax Trees (ASTs) using Clang LLVM for structured representation.</li>
+      </ul>
+    </div>
+
+    <div class="project-card">
+      <h3>Development of Information Retrieval System</h3>
+      <p class="project-role">Project Intern – IIT Jammu <span>(December 2023 – February 2024)</span></p>
+      <ul class="project-bullets">
+        <li>Developed a NLP-driven information retrieval system using Hugging Face models and the RAG principle, implemented through the Langchain framework.</li>
+        <li>Conducted PDF syntax analysis and implemented OCR to accurately extract and retrieve information from images.</li>
+      </ul>
+    </div>
+
+    <div class="project-card">
+      <h3>Legal Q/A Model</h3>
+      <p class="project-role">Undergraduate Research Project <span>(July 2024 – December 2024)</span></p>
+      <ul class="project-bullets">
+        <li>Fine-tuned Llama2 model using PEFT LoRA for memory optimization utilising the IndicLegalQA dataset.</li>
+        <li>Achieved up to 70% accuracy in legal Q/A tasks, validated using Sentence-BERT based similarity scores.</li>
+      </ul>
+    </div>
+
+    <div class="project-card">
+      <h3>Expense-sharing Application</h3>
+      <p class="project-role">Course Project <span>(November 2023)</span></p>
+      <ul class="project-bullets">
+        <li>Built a C++ application to manage shared expenses using object-oriented principles.</li>
+        <li>Designed key classes for efficient management of participants, expenses, and group transactions.</li>
+      </ul>
+    </div>
+
+    <div class="project-card">
+      <h3>Amazon Clone</h3>
+      <p class="project-role">Course Project <span>(September 2023 – November 2023)</span></p>
+      <ul class="project-bullets">
+        <li>Contributed to front-end development using HTML, CSS, and JavaScript to replicate the Amazon shopping platform as part of a group project.</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
         <section id="skills" class="section">
             <div class="container">
@@ -191,12 +204,26 @@
             </div>
         </section>     
 
-        
+        <section id="stamps" class="section">
+  <div class="container">
+    <h2>Stamp Collection</h2>
+    <p>I consider stamp collecting the greatest hobby.. because in every stamp, you hold a nation's history, a story, and a piece of the world.</p>
+    <div class="masonry-gallery">
+      <img src="images/img1.jpg" alt="Photo 1">
+      <img src="images/img2.jpg" alt="Photo 2">
+      <img src="images/img3.jpg" alt="Photo 3">
+      <img src="images/img4.jpg" alt="Photo 4">
+      <img src="images/img5.jpg" alt="Photo 5">
+      <!-- add more -->
+    </div>
+  </div>
+</section>
+       
         
         <section id="gallery" class="section">
             <div class="container">
                 <h2>Photography Gallery</h2>
-                <p>Photography is one of my favorite pastimes. Here are some of the moments I've captured during my travels.</p>
+                <p>Photography is one of my favourite pastimes. Here are some of the moments I've captured during my travels.</p>
                 <div class="carousel-container">
                     <button class="carousel-btn left-btn" onclick="scrollGallery('left')">&#10094;</button>
                     <div class="photo-gallery" id="photoGallery">
@@ -225,36 +252,12 @@
             </div>
         </section>
         
-
-        <section id="contact" class="section">
-            <div class="container">
-                <h2>Contact Me</h2>
-                <form id="contact-form">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-
-                    <button type="submit">Send</button>
-                </form>
-            </div>
-        </section>
     </main>
 
 <!-- Floating Resume Button -->
 <!-- <a href="Apratim_CV.pdf" target="_blank" class="resume-button" title="View Resume">
     <span class="resume-text">Resume</span>
 </a> -->
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Apratim Mishra. All Rights Reserved.</p>
-        </div>
-    </footer>
 
     <script src="script.js"></script>
 </body>
