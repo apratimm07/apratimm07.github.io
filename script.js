@@ -8,6 +8,21 @@ function showNextQuote() {
     quotes[currentQuote].classList.add('active');
 }
 
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, {
+  threshold: 0.2,
+});
+
+document.querySelectorAll('.education-card').forEach(card => {
+  observer.observe(card);
+});
+
+
 // Change quote every 5 seconds
 setInterval(showNextQuote, 5000);
 
