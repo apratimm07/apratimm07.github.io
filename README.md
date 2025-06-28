@@ -1,1 +1,1 @@
-Hey! I am Apratim Mishra. This is my portfolio website.
+A glimpse into my journey so far - what I’ve learnt, built, and explored.
